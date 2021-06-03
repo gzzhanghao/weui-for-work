@@ -16,13 +16,11 @@
 
 @import "../../base/fn";
 
-.setColor(--weui-BTN-DISABLED-FONT-COLOR, rgba(0, 0, 0, 0.2), rgba(255, 255, 255, 0.2));
-.setColor(--weui-BTN-DEFAULT-BG, #f2f2f2, rgba(255, 255, 255, 0.08));
-.setColor(--weui-BTN-DEFAULT-COLOR, #06ae56, rgba(255, 255, 255, 0.8));
-.setColor(--weui-BTN-DEFAULT-ACTIVE-BG, overlay(rgba(0, 0, 0, 0.05), #f2f2f2), overlay(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.08)));
+.setColor(--weui-BTN-DEFAULT-BG, rgba(0, 11, 26, 0.05), rgba(235, 243, 255, 0.16));
+.setColor(--weui-BTN-DEFAULT-LOADING-COLOR, rgba(38, 126, 240, 0.4), rgba(51, 140, 255, 0.4));
 
 @weuiBtnWidth: 184px;
-@weuiBtnHeight: 40px;
+@weuiBtnHeight: 46px;
 @weuiBtnFontSize: 17px;
 @weuiBtnBorderRadius: 4px;
 @weuiBtnDefaultGap: 16px;
@@ -32,29 +30,21 @@
 
 @weuiBtnCellHeight: 56px;
 @weuiBtnCellGap: 16px;
-@weuiBtnCellLineHeight:unit((@weuiBtnCellHeight - 2 * @weuiBtnCellGap) / @weuiBtnFontSize);
+@weuiBtnCellLineHeight: unit((@weuiBtnCellHeight - 2 * @weuiBtnCellGap) / @weuiBtnFontSize);
 
 @weuiBtnFontColor: #fff;
-@weuiBtnDisabledFontColor: var(--weui-BTN-DISABLED-FONT-COLOR);
-@weuiBtnDisabledBg: var(--weui-BTN-DEFAULT-BG);
+@weuiBtnLoadingFontColor: rgba(255, 255, 255, 0.4);
 
 // default
-@weuiBtnDefaultFontColor: var(--weui-BTN-DEFAULT-COLOR);
-@weuiBtnDefaultDisabledFontColor: @weuiBtnDisabledFontColor;
+@weuiBtnDefaultFontColor: var(--weui-BRAND);
+@weuiBtnDefaultLoadingFontColor: var(--weui-BTN-DEFAULT-LOADING-COLOR);
 @weuiBtnDefaultBg: var(--weui-BTN-DEFAULT-BG);
-@weuiBtnDefaultActiveBg: var(--weui-BTN-DEFAULT-ACTIVE-BG);
-@weuiBtnDefaultDisabledBg: @weuiBtnDisabledBg;
 
 // primary
 @weuiBtnPrimaryFontColor: @weuiBtnFontColor;
-@weuiBtnPrimaryDisabledFontColor: @weuiBtnDisabledFontColor;
 @weuiBtnPrimaryBg: var(--weui-BRAND);
-@weuiBtnPrimaryActiveBg: var(--weui-TAG-TEXT-GREEN);
-@weuiBtnPrimaryDisabledBg: @weuiBtnDisabledBg;
 
 // warn
-@weuiBtnWarnFontColor: @weuiColorWarn;
-@weuiBtnWarnDisabledFontColor: @weuiBtnDisabledFontColor;
-@weuiBtnWarnBg: @weuiBtnDefaultBg;
-@weuiBtnWarnActiveBg: @weuiBtnDefaultActiveBg;
-@weuiBtnwarnDisabledBg: @weuiBtnDefaultDisabledBg;
+@weuiBtnWarnFontColor: @weuiBtnFontColor;
+@weuiBtnWarnLoadingFontColor: @weuiBtnLoadingFontColor;
+@weuiBtnWarnBg: var(--weui-RED);

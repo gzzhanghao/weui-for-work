@@ -17,6 +17,9 @@
 @import "../../base/fn";
 
 .weui-btn_disabled {
-    color: @weuiBtnDisabledFontColor;
-    background-color: @weuiBtnDisabledBg;
+    opacity: 0.4;
+
+    &:before {
+        display: none;
+    }
 }
